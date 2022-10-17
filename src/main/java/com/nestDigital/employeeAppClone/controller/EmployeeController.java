@@ -5,19 +5,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EmployeeController {
-    @GetMapping("/home")
+    @GetMapping("/")
     public String Home(){
         return "this is my home";
     }
-    @GetMapping("/employeeAdd")
+    @GetMapping("/add")
     public String EmployeeAdd(){
         return "this is my Employee Add page";
     }
-    @GetMapping("/employeeSearch")
+    @GetMapping("/search")
     public String EmployeeSearch(){
         return "this is my Employee Search page";
     }
-    @GetMapping("/employeeDelete")
+    @GetMapping("/delete")
     public String EmployeeDelete(){
         return "this is my Employee Delete page";
     }
