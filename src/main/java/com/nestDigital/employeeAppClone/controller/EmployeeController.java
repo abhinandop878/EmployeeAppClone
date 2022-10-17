@@ -1,7 +1,11 @@
 package com.nestDigital.employeeAppClone.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class EmployeeController {
@@ -20,5 +24,16 @@ public class EmployeeController {
     @GetMapping("/delete")
     public String EmployeeDelete(){
         return "this is my Employee Delete page";
+    }
+
+    @PostMapping("/read")
+    public String read(){
+        return "this my read page";
+    }
+    @GetMapping("/viewall")
+    public List viewAll(){
+        List<String> myList=new ArrayList<>();
+        myList.add("{'name':'Abhinand','age':20}");
+        return myList;
     }
 }
